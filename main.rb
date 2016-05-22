@@ -2,31 +2,31 @@
 def start
     puts """ It was evening time on the settlement and you are commanded to bring
     some water from the well to the village. So you go to the well and start
-    putting the bucket into suddenly a strong force pushes you into the well!/n"""
+    putting the bucket into suddenly a strong force pushes you into the well!"""
 
-    puts "DUH DUH DUH!!!!!!/n"
+    puts "DUH DUH DUH!!!!!!"
 
     puts """You awaken but it is getting even darker. You are very confused as
     to why their is no water in this particular well. But you see three doors.
     A Blue Door, a Red Door, and a Green door. Please now pick which room to go
     into.
 
-    For Blue Door, type bluedoor.
+    For Blue Door, type blue door.
 
-    For Red Door, type reddoor.
+    For Red Door, type red door.
 
-    For Green Door, type greendoor.
+    For Green Door, type green door.
 
     To not do anything, type wait """
 
     choice = $stdin.gets.chomp
-    if choice.include? "bluedoor"
+    if choice.include? "blue door"
         #This will go to the blue room to continue the game
         blueRoom
-    elsif choice.include? "reddoor"
+    elsif choice.include? "red door"
         #This will go to the red room to continue the game
         redRoom
-    elsif choice.include? "greendoor"
+    elsif choice.include? "green door"
         #this will go to the green room
         greenRoom
     elsif choice.include? "wait"
@@ -97,13 +97,14 @@ def greenRoom
     proceed to beat you with a stick. They now stare at you intensely as your
     flee or fight mode comes in. What do you do?"""
 
-    puts "Option 1. Try to pet the rabbit"
+    puts "Option 1. Try to pet the rabbit | Type pet rabbit"
 
-    puts "Option 2 Run in the only direction available"
+    puts "Option 2 Run in the only direction available | Type Run"
 
-    puts  "Option 3 Stay"
+    puts  "Option 3 Stay | Type Stay"
 
     puts "Option 4: ??? Bonus. Read the source code to find out secret option."
+
 
     choice = $stdin.gets.chomp
 
@@ -123,10 +124,10 @@ def greenRoom
 end
 
 
-
+# This is a function that is death. If the player goes into a room that causes death this is the default thing that happens
 def dead(reason)
     puts reason, "What a death indeed"
-    
+
     puts "Game over!"
 
     puts """ Thanks for playing. This game was an assignment on
@@ -135,6 +136,7 @@ def dead(reason)
     submit a bug. Hope you enjoyed the game!"""
 end
 
+# This function is for if the player makes it out alive. It gives useful information on why they survived.
 def alive(reason)
     puts reason, "Now be gratefult to be alive"
 

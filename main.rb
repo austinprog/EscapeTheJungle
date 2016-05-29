@@ -3,9 +3,10 @@ def start
     puts """ It was evening time on the settlement and you are commanded to bring
     some water from the well to the village. So you go to the well and start
     putting the bucket into suddenly a strong force pushes you into the well!"""
-
-    puts "DUH DUH DUH!!!!!!"
-
+    # Sleep is to make it not seem so compacted
+    sleep(2)
+    puts "DUH DUH DUUUUUH"
+    sleep(2)
     puts """You awaken but it is getting even darker. You are very confused as
     to why their is no water in this particular well. But you see three doors.
     A Blue Door, a Red Door, and a Green door. Please now pick which room to go
@@ -64,20 +65,21 @@ end
 
 def redRoom
      puts """You enter the room and the floor suddenly collapses! You are left
-    #severaly injured and cannot move your legs. Worse of all, you seem to be
-    #going in and out of conciousness. However, immiedietly to your line of sight
-    #three holes."""
-
+    severaly injured and cannot move your legs. Worse of all, you seem to be
+    going in and out of conciousness. However, immiedietly to your line of sight
+    three holes."""
+    sleep(2)
     puts """You see a hole that emmits a biright light. Very bright that it
     #starts to hurt your eyes"""
-
-    puts """The first hole goes straight underground. It also appears to be
+    sleep(2)
+    puts """You see a second hole that goes straight underground. It also appears to be
     #emmiting some type of smoke."""
-
+    sleep(2)
     puts """You see a third hole that also has some sort of moving platform.
     #Next to the wall you also discover a sign that says in bold letters
     #DO NOT ENTER"""
     choice = $stdin.gets.chomp
+
     if choice.include? "Hole One"
         dead(""" You decide to go into the hole which is emmiting the bright light.
         Upon entering, a weird lizard grabs your hand and introduces you to the
@@ -129,7 +131,7 @@ def dead(reason)
     puts reason, "What a death indeed"
 
     puts "Game over!"
-
+    sleep(10)
     puts """ Thanks for playing. This game was an assignment on
     Learn Ruby the hard way. I have definetly learned how to use defs!
     If you found a bug please go ahead and either submit a pull request or
@@ -141,7 +143,7 @@ def alive(reason)
     puts reason, "Now be gratefult to be alive"
 
     puts "Game Over!"
-
+    sleep(10)
     puts """ Thanks for playing. This game was an assignment on
     Learn Ruby the hard way. I have definetly learned how to use defs!
     If you found a bug please go ahead and either submit a pull request or

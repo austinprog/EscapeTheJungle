@@ -1,4 +1,4 @@
-
+#This is the start screen"
 def start
     puts """ It was evening time on the settlement and you are commanded to bring
     some water from the well to the village. So you go to the well and start
@@ -33,7 +33,7 @@ def start
     elsif choice.include? "wait"
         dead("You waited and ended up starving to death")
     else
-        dead("I did not understand what you typed")
+        dead("I did not understand what you typed |  Try Again")
     end
 end
 
@@ -70,14 +70,17 @@ def redRoom
     three holes."""
     sleep(2)
     puts """You see a hole that emmits a biright light. Very bright that it
-    #starts to hurt your eyes"""
+    starts to hurt your eyes"""
     sleep(2)
     puts """You see a second hole that goes straight underground. It also appears to be
-    #emmiting some type of smoke."""
+    emmiting some type of smoke."""
     sleep(2)
     puts """You see a third hole that also has some sort of moving platform.
-    #Next to the wall you also discover a sign that says in bold letters
-    #DO NOT ENTER"""
+    Next to the wall you also discover a sign that says in bold letters
+    DO NOT ENTER"""
+    
+    puts "Type in Hole One, Hole Two or Hole Three  (exactly as shown)"
+
     choice = $stdin.gets.chomp
 
     if choice.include? "Hole One"
@@ -140,7 +143,7 @@ end
 
 # This function is for if the player makes it out alive. It gives useful information on why they survived.
 def alive(reason)
-    puts reason, "Now be gratefult to be alive"
+    puts reason, "Now be grateful to be alive"
 
     puts "Game Over!"
     sleep(10)

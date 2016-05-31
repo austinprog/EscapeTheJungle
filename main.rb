@@ -1,4 +1,4 @@
-#This is the start screen"
+# This program is seperated in different defs
 def start
     puts """ It was evening time on the settlement and you are commanded to bring
     some water from the well to the village. So you go to the well and start
@@ -33,7 +33,10 @@ def start
     elsif choice.include? "wait"
         dead("You waited and ended up starving to death")
     else
-        dead("I did not understand what you typed |  Try Again")
+        puts "I did not understand what you typed. | Please try again"
+	sleep(2)
+	# Restarts once more
+	start
     end
 end
 
@@ -59,6 +62,8 @@ def blueRoom
         home and think about your crazy adventure""")
     else
         puts "Please try again"
+	sleep(2)
+	blueRoom
     end
 end
 
@@ -93,7 +98,9 @@ def redRoom
         alive(""" You get in the elevator in the third hole and it ends up going up and burst through a shopping malls men's restroom.
          Everyone is staring at you in confusion, but you are just happy to be alive.""" )
      else
-         puts "sorry mate, cannot understand your input"
+         puts "sorry mate, cannot understand your input | Please try again"
+	 sleep(2)
+	 redRoom
     end
 end
 
@@ -125,6 +132,8 @@ def greenRoom
         and they make you Lord Commander!""")
     else
         puts "Sorry, did not understand your input"
+	sleep(2)
+	greenRoom
     end
 end
 
